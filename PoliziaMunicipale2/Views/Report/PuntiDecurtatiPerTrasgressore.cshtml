@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Totale dei punti decurtati raggruppati per trasgressore";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Trasgressore</th>
+            <th>Totale Punti Decurtati</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Trasgressore</td>
+                <td>@item.TotalePuntiDecurtati</td>
+            </tr>
+        }
+    </tbody>
+</table>

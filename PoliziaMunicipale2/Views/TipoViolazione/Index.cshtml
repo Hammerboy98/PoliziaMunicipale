@@ -1,0 +1,28 @@
+﻿@model IEnumerable<PoliziaMunicipale2.Models.TipoViolazione>
+
+@{
+    ViewData["Title"] = "Elenco Violazioni";
+}
+
+<h2>Elenco delle Violazioni</h2>
+
+<!-- Pulsante per creare una nuova violazione -->
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary">Crea Violazione</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Descrizione</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var violazione in Model)
+        {
+            <tr>
+                <td>@violazione.Descrizione</td>
+            </tr>
+        }
+    </tbody>
+</table>

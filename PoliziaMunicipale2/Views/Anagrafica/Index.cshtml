@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PoliziaMunicipale2.Models.Anagrafica>
+
+@{
+    ViewData["Title"] = "Elenco Trasgressori";
+}
+
+<h2>Elenco Trasgressori</h2>
+
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary">Aggiungi Nuovo Trasgressore</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Cognome</th>
+            <th>Nome</th>
+            <th>Indirizzo</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Cognome</td>
+                <td>@item.Nome</td>
+                <td>@item.Indirizzo</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
